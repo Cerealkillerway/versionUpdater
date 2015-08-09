@@ -1,4 +1,4 @@
-# VersionUpdater v1.0.0
+# VersionUpdater v1.0.1
 A CLI to manage version numbers in a project.
 
 ![VersionUpdater](http://144.76.103.88/webforge_static/appLogos/versionUpdaterLogo.png)
@@ -64,6 +64,10 @@ Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT
 
 
 ##### History
-v1.0.0
-------
+1.0.1
+-----
+- auto-add versionFilesList.json to .gitignore if exists
+
+1.0.0
+-----
 - first version
