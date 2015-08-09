@@ -1,0 +1,41 @@
+{
+  "name": "version-updater",
+  "version": "1.0.0",
+  "description": "Automatically replace version number in your projects",
+  "author": "CK <cerealkillerway@gmail.com>",
+  "bin": {
+    "version": "./lib/version.js"
+  },
+  "main": "./lib/version.js",
+  "preferGlobal": "true",
+  "keywords": [
+    "version",
+    "version update",
+    "version manager"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Cerealkillerway/versionUpdater.git"
+  },
+  "maintainers": [
+    "CK <cerealkillerway@gmail.com>"
+  ],
+  "dependencies": {
+    "chalk": "^1.1.0",
+    "commander": "^2.8.1",
+    "read-json-sync": "^1.1.0"
+  },
+  "licence": "MIT",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Cerealkillerway/versionUpdater/issues"
+  },
+  "homepage": "https://github.com/Cerealkillerway/versionUpdater",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
+}
