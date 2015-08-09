@@ -29,7 +29,7 @@ The module will replace version numbers in two different ways, depending on the 
 
 ##Commands and Options
 
-syntax: <i>version [globalOptions] command [commandOptions]
+syntax: <i>version [globalOptions] command [commandOptions]</i>
 
 ####Global Options
 - <b>-V --version</b>: log versionUpdater's version
