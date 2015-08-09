@@ -10,7 +10,7 @@ This module will automatize the version number updating.
 
 ##How it works
 
-using command <b>version init</b> in your project root, it will create a file named <i>versionFilesList.json</i>.<br>
+Using command <b>version init</b> in your project root, it will create a file named <i>versionFilesList.json</i>.<br>
 This file contains a list of files where version numbers will be updated (it will not process in any way other files than the ones in the list).<br>
 By default the list will contains 4 files: <i>package.json</i>, <i>bower.json</i>, <i>README.md</i>, <i>index.html</i> (but they will be included only if they exists).
 
