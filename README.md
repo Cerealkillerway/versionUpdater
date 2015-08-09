@@ -51,7 +51,7 @@ It also try to find a <i>package.json</i> or <i>bower.json</i> to get package na
 updates all files in fileList replacing the currentVersion with "newVersion".
 In json files updates the <i>"version"</i> line, in other files updates vX.X.X where X.X.X is the currentVersion (as explained above).
 
-(all the following three options are shorthands and are used only if <i>newVersion</i> parameter is missing, otherwise will be ignored)
+(all the following three options are shorthands and are used only if <i>newVersion</i> parameter is missing, otherwise they will be ignored)
 
 - <b>-M --major</b>: increase by 1 the major version number (<b>X+1</b>.x.x)
 - <b>-m --minor</b>: increase by 1 the minor version number (x.<b>X+1</b>.x)
