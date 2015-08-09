@@ -16,7 +16,7 @@ By default the list will contains 4 files: <i>package.json</i>, <i>bower.json</i
 
 You can add or remove files in any moment by editing <i>versionFilesList.json</i> or using command line options <b>-a (--add)</b> and <b>-r (--remove)</b>.
 
-<i>You'll get a warning if the file list is empty (because none of default files and added files exists in the current folder).
+<i>You'll get a warning if the file list is empty (because none of default files and added files exists in the current folder).</i>
 
 <b>It will also try to understand your package name and current version from a <i>package.json</i> or <i>bower.json</i> file.<br>
 If you don't have <i>package.json</i> or <i>bower.json</i> in your project, then you will need to update <i>versionFilesList.json</i> manually with these informations.</b>
