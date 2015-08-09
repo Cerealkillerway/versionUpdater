@@ -1,4 +1,4 @@
-#VersionUpdater v1.0.0
+# VersionUpdater v1.0.0
 A CLI to manage version numbers in a project.
 
 ![VersionUpdater](http://144.76.103.88/webforge_static/appLogos/versionUpdaterLogo.png)
@@ -8,7 +8,7 @@ A CLI to manage version numbers in a project.
 While working on a project, it happens to have to change version number on many different files before committing.
 This module will automatize the version number updating.
 
-##How it works
+## How it works
 
 Using command <b>version init</b> in your project root, it will create a file named <i>versionFilesList.json</i>.<br>
 This file contains a list of files where version numbers will be updated (it will not process in any way other files than the ones in the list).<br>
@@ -27,16 +27,16 @@ The module will replace version numbers in two different ways, depending on the 
 
 - if the file is <b> NOT json</b> it will update all occurrencies of <b>vX.X.X</b> where X.X.X is the current version (this will avoid to replace version numbers where it is not wanted (ex. in an <i>```<script>```</i> inclusion in html file))
 
-##Commands and Options
+## Commands and Options
 
 syntax: <i>version [globalOptions] command [commandOptions]</i>
 
-####Global Options
+#### Global Options
 - <b>-V --version</b>: log versionUpdater's version
 - <b>-h --help</b>: manual page
 - <b>-d --debug</b>: activate debug mode with extra console logs
 
-####Commands
+#### Commands
 <b>init</b><br>
 initializes current folder by creating <i>versionFilesList.json</i>, that contains "filesList" used by versionUpdater to store the list of files to update.
 
