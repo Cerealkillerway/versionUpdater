@@ -1,4 +1,4 @@
-# VersionUpdater v2.0.3
+# VersionUpdater v2.0.4
 A CLI to manage version numbers in a project.
 
 ![VersionUpdater](http://144.76.103.88/webforge_static/appLogos/versionUpdater.png)
@@ -73,6 +73,10 @@ Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT
 
 
 ##### History
+2.0.4
+-----
+- fixed log grammar
+
 2.0.3
 -----
 - added custom version prefix for non-json files
