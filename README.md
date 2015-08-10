@@ -1,4 +1,4 @@
-# VersionUpdater v1.0.1
+# VersionUpdater v2.0.3
 A CLI to manage version numbers in a project.
 
 ![VersionUpdater](http://144.76.103.88/webforge_static/appLogos/versionUpdaterLogo.png)
@@ -25,7 +25,8 @@ The module will replace version numbers in two different ways, depending on the 
 
 - if the file is <b>json</b>, it will update the row containing <b>"version":</b> keyword
 
-- if the file is <b> NOT json</b> it will update all occurrencies of <b>vX.X.X</b> where X.X.X is the current version (this will avoid to replace version numbers where it is not wanted (ex. in an <i>```<script>```</i> inclusion in html file))
+- if the file is <b> NOT json</b> it will update all occurrencies of <b>vX.X.X</b> where X.X.X is the current version (this will avoid to replace version numbers where it is not wanted (ex. in an <i>```<script>```</i> inclusion in html file)).<br>
+the <i>"v"</i> prefix for version number is customizable using option <b>-p (--prefix)</b> with command <b>init</b> (see below).
 
 ## Commands and Options
 
@@ -43,8 +44,16 @@ initializes current folder by creating <i>versionFilesList.json</i>, that contai
 It also try to find a <i>package.json</i> or <i>bower.json</i> to get package name and currentVersion; if these files does not exists in your project, you will need to fill <i>versionFilesList.json</i> manually with missing informations.
 
 - <b>-f --force</b>: forces re-init, deleting and recreating <i>versionFilesList.json</i>
+- <b>-p --prefix</b>: set the custom version number's prefix used for replace task in non-json files (default <i>"v"</i>)
 - <b>-a --add &lt;files&gt;</b>: specifies one or more files to add to filesList (comma separated)
 - <b>-r --remove &lt;files&gt;</b>: specifies one or more files to remove from filesList (comma separated); this option is ignored if used together with <b>-f</b>
+
+
+<b>list</b><br>
+lists all files currently in filesList (stored in versionFilesList.json).<br>
+These are the files in which <i>versionUpdater</i> will replace version numbers.
+
+- <b>--current</b>: logs also the current version of the project
 
 
 <b>update &lt;newVersion&gt;</b><br>
@@ -53,8 +62,8 @@ In json files updates the <i>"version"</i> line, in other files updates vX.X.X w
 
 (all the following three options are shorthands and are used only if <i>newVersion</i> parameter is missing, otherwise they will be ignored)
 
-- <b>-M --major</b>: increase by 1 the major version number (<b>X+1</b>.x.x)
-- <b>-m --minor</b>: increase by 1 the minor version number (x.<b>X+1</b>.x)
+- <b>-M --major</b>: increase by 1 the major version number (<b>X+1</b>.0.0)
+- <b>-m --minor</b>: increase by 1 the minor version number (x.<b>X+1</b>.0)
 - <b>-p --patch</b>: increase by 1 the patch version number (x.x.<b>X+1</b>)
 
 
@@ -64,6 +73,12 @@ Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT
 
 
 ##### History
+2.0.3
+-----
+- added custom version prefix for non-json files
+- added list command
+- version auto-increment bug fixes
+
 1.0.1
 -----
 - auto-add versionFilesList.json to .gitignore if exists
