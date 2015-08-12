@@ -25,7 +25,7 @@ The module will replace version numbers in two different ways, depending on the 
 
 - if the file is **json**, it will update the row containing **"version":** keyword
 
-- if the file is ** NOT json** it will update all occurrencies of **vX.X.X** where X.X.X is the current version (this will avoid to replace version numbers where it is not wanted (ex. in an *```<script>```* inclusion in html file)).<br>
+- if the file is **NOT json** it will update all occurrencies of **vX.X.X** where X.X.X is the current version (this will avoid to replace version numbers where it is not wanted (ex. in an *```<script>```* inclusion in html file)).<br>
 the *"v"* prefix for version number is customizable using option **-p (--prefix)** with command **init** (see below).
 
 ## Commands and Options
