@@ -1,4 +1,4 @@
-# VersionUpdater v2.0.4
+# VersionUpdater v3.0.0
 A CLI to manage version numbers in a project.
 
 ![VersionUpdater](http://144.76.103.88/webforge_static/appLogos/versionUpdater.png)
@@ -10,61 +10,61 @@ This module will automatize the version number updating.
 
 ## How it works
 
-Using command <b>version init</b> in your project root, it will create a file named <i>versionFilesList.json</i>.<br>
+Using command **version init** in your project root, it will create a file named *versionFilesList.json*.<br>
 This file contains a list of files where version numbers will be updated (it will not process in any way other files than the ones in the list).<br>
-By default the list will contains 4 files: <i>package.json</i>, <i>bower.json</i>, <i>README.md</i>, <i>index.html</i> (but they will be included only if they exists).
+By default the list will contains 4 files: *package.json*, *bower.json*, *README.md*, *index.html* (but they will be included only if they exists).
 
-You can add or remove files in any moment by editing <i>versionFilesList.json</i> or using command line options <b>-a (--add)</b> and <b>-r (--remove)</b>.
+You can add or remove files in any moment by editing *versionFilesList.json* or using command line options **-a (--add)** and **-r (--remove)**.
 
-<i>You'll get a warning if the file list is empty (because none of default files and added files exists in the current folder).</i>
+*You'll get a warning if the file list is empty (because none of default files and added files exists in the current folder).*
 
-<b>It will also try to understand your package name and current version from a <i>package.json</i> or <i>bower.json</i> file.<br>
-If you don't have <i>package.json</i> or <i>bower.json</i> in your project, then you will need to update <i>versionFilesList.json</i> manually with these informations.</b>
+**It will also try to understand your package name and current version from a *package.json* or *bower.json* file.<br>
+If you don't have *package.json* or *bower.json* in your project, then you will need to update *versionFilesList.json* manually with these informations.**
 
 The module will replace version numbers in two different ways, depending on the file type:
 
-- if the file is <b>json</b>, it will update the row containing <b>"version":</b> keyword
+- if the file is **json**, it will update the row containing **"version":** keyword
 
-- if the file is <b> NOT json</b> it will update all occurrencies of <b>vX.X.X</b> where X.X.X is the current version (this will avoid to replace version numbers where it is not wanted (ex. in an <i>```<script>```</i> inclusion in html file)).<br>
-the <i>"v"</i> prefix for version number is customizable using option <b>-p (--prefix)</b> with command <b>init</b> (see below).
+- if the file is ** NOT json** it will update all occurrencies of **vX.X.X** where X.X.X is the current version (this will avoid to replace version numbers where it is not wanted (ex. in an *```<script>```* inclusion in html file)).<br>
+the *"v"* prefix for version number is customizable using option **-p (--prefix)** with command **init** (see below).
 
 ## Commands and Options
 
-syntax: <i>version [globalOptions] command [commandOptions]</i>
+syntax: *version [globalOptions] command [commandOptions]*
 
 #### Global Options
-- <b>-V --version</b>: log versionUpdater's version
-- <b>-h --help</b>: manual page
-- <b>-d --debug</b>: activate debug mode with extra console logs
+- **-V --version**: log versionUpdater's version
+- **-h --help**: manual page
+- **-d --debug**: activate debug mode with extra console logs
 
 #### Commands
-<b>init</b><br>
-initializes current folder by creating <i>versionFilesList.json</i>, that contains "filesList" used by versionUpdater to store the list of files to update.
+**init**<br>
+initializes current folder by creating *versionFilesList.json*, that contains "filesList" used by versionUpdater to store the list of files to update.
 
-It also try to find a <i>package.json</i> or <i>bower.json</i> to get package name and currentVersion; if these files does not exists in your project, you will need to fill <i>versionFilesList.json</i> manually with missing informations.
+It also try to find a *package.json* or *bower.json* to get package name and currentVersion; if these files does not exists in your project, you will need to fill *versionFilesList.json* manually with missing informations.
 
-- <b>-f --force</b>: forces re-init, deleting and recreating <i>versionFilesList.json</i>
-- <b>-p --prefix</b>: set the custom version number's prefix used for replace task in non-json files (default <i>"v"</i>)
-- <b>-a --add &lt;files&gt;</b>: specifies one or more files to add to filesList (comma separated)
-- <b>-r --remove &lt;files&gt;</b>: specifies one or more files to remove from filesList (comma separated); this option is ignored if used together with <b>-f</b>
+- **-f --force**: forces re-init, deleting and recreating *versionFilesList.json*
+- **-p --prefix**: set the custom version number's prefix used for replace task in non-json files (default *"v"*)
+- **-a --add &lt;files&gt;**: specifies one or more files to add to filesList (comma separated)
+- **-r --remove &lt;files&gt;**: specifies one or more files to remove from filesList (comma separated); this option is ignored if used together with **-f**
 
 
-<b>list</b><br>
+**list**<br>
 lists all files currently in filesList (stored in versionFilesList.json).<br>
-These are the files in which <i>versionUpdater</i> will replace version numbers.
+These are the files in which *versionUpdater* will replace version numbers.
 
-- <b>--current</b>: logs also the current version of the project
+- **--current**: logs also the current version of the project
 
 
-<b>update &lt;newVersion&gt;</b><br>
+**update &lt;newVersion&gt;**<br>
 updates all files in fileList replacing the currentVersion with "newVersion".
-In json files updates the <i>"version"</i> line, in other files updates vX.X.X where X.X.X is the currentVersion (as explained above).
+In json files updates the *"version"* line, in other files updates vX.X.X where X.X.X is the currentVersion (as explained above).
 
-(all the following three options are shorthands and are used only if <i>newVersion</i> parameter is missing, otherwise they will be ignored)
+(all the following three options are shorthands and are used only if *newVersion* parameter is missing, otherwise they will be ignored)
 
-- <b>-M --major</b>: increase by 1 the major version number (<b>X+1</b>.0.0)
-- <b>-m --minor</b>: increase by 1 the minor version number (x.<b>X+1</b>.0)
-- <b>-p --patch</b>: increase by 1 the patch version number (x.x.<b>X+1</b>)
+- **-M --major** [howMany]: increase by [howMany] the major version number (**X+howMany**.0.0); if [howMany] is missing, increase by 1
+- **-m --minor** [howMany]: increase by [howMany] the minor version number (x.**X+howMany**.0); if [howMany] is missing, increase by 1
+- **-p --patch** [howMany]: increase by [howMany] the patch version number (x.x.**X+howMany**); if [howMany] is missing, increase by 1
 
 
 
@@ -73,6 +73,12 @@ Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT
 
 
 ##### History
+3.0.0
+-----
+The configuration file format has changed, but versionUpdater will automatically rebuild it from the existing one
+- changed configuration file to hidden file (better for use with frameworks like meteor)
+- added support for increment more than 1 at once
+
 2.0.4
 -----
 - fixed log grammar
