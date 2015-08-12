@@ -1,4 +1,4 @@
-# VersionUpdater v3.0.0
+# VersionUpdater v3.0.1
 A CLI to manage version numbers in a project.
 
 ![VersionUpdater](http://144.76.103.88/webforge_static/appLogos/versionUpdater.png)
@@ -73,6 +73,10 @@ Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT
 
 
 ##### History
+3.0.1
+-----
+- fixed missing message on configuration file update
+
 3.0.0
 -----
 The configuration file format has changed, but versionUpdater will automatically rebuild it from the existing one
