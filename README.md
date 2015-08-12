@@ -69,7 +69,7 @@ In json files updates the *"version"* line, in other files updates vX.X.X where 
 
 
 ### License
-Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>
+Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a> (also available in included **license.txt** file).
 
 
 ##### History
