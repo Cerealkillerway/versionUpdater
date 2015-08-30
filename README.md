@@ -77,7 +77,7 @@ Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT
 
 
 ##### History
-3.0.4
+3.0.5
 -----
 - added simple print of current project's version when used without arguments
 
