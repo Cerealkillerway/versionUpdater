@@ -1,4 +1,4 @@
-# VersionUpdater v3.0.3
+# VersionUpdater v3.0.5
 A CLI to manage version numbers in a project.
 
 ![VersionUpdater](http://144.76.103.88/webforge_static/appLogos/versionUpdater.png)
@@ -31,6 +31,8 @@ The *"v"* prefix is customizable using option **-p (--prefix)** with command **i
 ## Commands and Options
 
 syntax: *version [globalOptions] command [commandOptions]*
+
+Use *version* (without any argument) to output just the current project's version.
 
 #### Global Options
 - **-V --version**: log versionUpdater's version
@@ -75,6 +77,10 @@ Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT
 
 
 ##### History
+3.0.4
+-----
+- added simple print of current project's version when used without arguments
+
 3.0.3
 -----
 - added "--projectName" and "--currentVersion" options to "init" command
