@@ -77,7 +77,7 @@ Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT
 
 
 ##### History
-3.0.7
+3.0.8
 -----
 - added check for already added files when using "init -a" command
 
