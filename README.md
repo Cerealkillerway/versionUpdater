@@ -1,4 +1,4 @@
-# VersionUpdater v3.0.5
+# VersionUpdater v3.10.1
 A CLI to manage version numbers in a project.
 
 ![VersionUpdater](http://144.76.103.88/webforge_static/appLogos/versionUpdater.png)
@@ -7,6 +7,24 @@ A CLI to manage version numbers in a project.
 
 While working on a project, it happens to have to change the version number in many files before committing.
 This module will automatize the version number updating.
+
+## UPGRADE WARNING
+
+This version introduces the **fileType** support (please read below);
+if you are already using a previous version of this module, all your files in your **.versionFilesList.json** will be interpreted as **normal files**.
+To avoid this you can add ":package" next to the name of your json files in your **.versionFilesList.json** or remove and add them again (in this case the fileType will be automatically added as "package" for json files); new **.versionFilesList.json** structure:
+
+    {
+        "name": "web-app",
+        "currentVersion": "3.12.85",
+        "versionPrefix": "v",
+        "filesList": [
+            "package.json:package",       // package file!
+            "bower.json:package",         // package file!
+            "config/environment.js",
+            "README.md"
+        ]
+    }
 
 ## How it works
 
@@ -109,6 +127,11 @@ Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT
 
 
 ##### History
+3.10.1
+------
+- added support for *fileTypes*
+- added auto-detec file type function
+
 3.0.8
 -----
 - added check for already added files when using "init -a" command
