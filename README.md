@@ -1,7 +1,7 @@
-# VersionUpdater v3.10.3
+# VersionUpdater v3.10.4
 A CLI to manage version numbers in a project.
 
-![VersionUpdater](http://144.76.103.88/webforge_static/appLogos/versionUpdater.png)
+![VersionUpdater](https://github.com/Cerealkillerway/versionUpdater/images/versionUpdater.png)
 
     npm install -g version-updater
 
