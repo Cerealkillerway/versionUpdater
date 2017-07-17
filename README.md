@@ -127,6 +127,10 @@ Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT
 
 
 ##### History
+3.10.2
+------
+- added file type support during init
+
 3.10.1
 ------
 - added support for *fileTypes*
