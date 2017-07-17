@@ -1,4 +1,4 @@
-# VersionUpdater v3.10.4
+# VersionUpdater v3.11.0
 A CLI to manage version numbers in a project.
 
 ![VersionUpdater](https://github.com/Cerealkillerway/versionUpdater/blob/master/images/versionUpdaterLogo.png)
@@ -119,6 +119,8 @@ In json files updates the *"version"* line, in other files updates vX.X.X where 
 - **-M --major** [howMany]: increase by [howMany] the major version number (**X+howMany**.0.0); if [howMany] is missing, increase by 1
 - **-m --minor** [howMany]: increase by [howMany] the minor version number (x.**X+howMany**.0); if [howMany] is missing, increase by 1
 - **-p --patch** [howMany]: increase by [howMany] the patch version number (x.x.**X+howMany**); if [howMany] is missing, increase by 1
+- **--analyze**: search for wrong version numbers in files while updating
+- **--verbose**: (to be used with `--analyze`) logs to screen the lines containing wrong version numbers
 
 
 
@@ -127,6 +129,11 @@ Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT
 
 
 ##### History
+3.11.0
+------
+- added analyze option
+- added verbose option for analyze
+
 3.10.2
 ------
 - added file type support during init
