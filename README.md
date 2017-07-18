@@ -1,4 +1,4 @@
-# VersionUpdater v3.12.3
+# VersionUpdater v3.12.4
 A CLI to manage version numbers in a project.
 
 ![VersionUpdater](http://files.web-forge.info/logos/versionUpdater.png)
@@ -121,6 +121,7 @@ In json files updates the *"version"* line, in other files updates vX.X.X where 
 - **-p --patch** [howMany]: increase by [howMany] the patch version number (x.x.**X+howMany**); if [howMany] is missing, increase by 1
 - **--analyze**: search for wrong version numbers in files while updating
 - **--verbose**: (to be used with `--analyze`) logs to screen the lines containing wrong version numbers
+- **--fix**: (to be used with `--analyze`) replace wrong version numbers found with the current one
 
 
 
