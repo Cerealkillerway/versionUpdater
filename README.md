@@ -1,4 +1,4 @@
-# VersionUpdater v3.11.1
+# VersionUpdater v3.12.3
 A CLI to manage version numbers in a project.
 
 ![VersionUpdater](http://files.web-forge.info/logos/versionUpdater.png)
@@ -129,6 +129,11 @@ Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT
 
 
 ##### History
+3.12.3
+------
+- added "fix" functionality for wrong version numbers
+- improved console logs readability
+
 3.11.0
 ------
 - added analyze option

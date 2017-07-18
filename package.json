@@ -1,6 +1,6 @@
 {
   "name": "version-updater",
-  "version": "3.11.1",
+  "version": "3.12.3",
   "description": "Automatically replace version numbers in your projects",
   "author": "CK <cerealkillerway@gmail.com>",
   "bin": {
