@@ -66,11 +66,11 @@ Use *version* (without any argument) to output just the current project's versio
 - **-h --help**: manual page
 - **-d --debug**: activate debug mode with extra console logs
 
-#### Commands
-**init**<br>
+## Commands
+## **init**<br>
 initializes current folder by creating *.versionFilesList.json*, that contains "filesList" used by versionUpdater to store the list of files to update.
 
-It also try to find a *package.json* or *bower.json* to get package name and currentVersion; if these files does not exist in your project, you will need to fill *.versionFilesList.json* manually with missing informations.
+It also tries to find a *package.json* or *bower.json* to get package name and currentVersion; if these files does not exist in your project, you will need to fill *.versionFilesList.json* manually with missing informations.
 
 - **-f --force**: forces re-init, deleting and recreating *.versionFilesList.json*
 - **-p --prefix**: set the custom version number's prefix used for replace task in non-json files (default *"v"*)
@@ -103,14 +103,14 @@ The following examples illustrate how to import any file as any type you want, e
 - **--currentVersion**: manually force the current project's version, instead of getting it from *package.json* or *bower.json*
 
 
-**list**<br>
+## **list**<br>
 lists all files currently in filesList (stored in *.versionFilesList.json*).<br>
 These are the files in which *versionUpdater* will replace version numbers.
 
 - **--current**: logs also the current version of the project
 
 
-**update &lt;newVersion&gt;**<br>
+## **update &lt;newVersion&gt;**<br>
 updates all files in filesList replacing the currentVersion with "newVersion".
 In json files updates the *"version"* line, in other files updates vX.X.X where X.X.X is the currentVersion (as explained above).
 
