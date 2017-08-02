@@ -1,4 +1,4 @@
-# VersionUpdater v3.12.4
+# VersionUpdater v3.12.15
 A CLI to manage version numbers in a project.
 
 ![VersionUpdater](http://files.web-forge.info/logos/versionUpdater.png)
@@ -8,23 +8,6 @@ A CLI to manage version numbers in a project.
 While working on a project, it happens to have to change the version number in many files before committing.
 This module will automatize the version number updating.
 
-## UPGRADE WARNING
-
-This version introduces the **fileType** support (please read below);
-if you are already using a previous version of this module, all your files in your **.versionFilesList.json** will be interpreted as **normal files**.
-To avoid this you can add ":package" next to the name of your json files in your **.versionFilesList.json** or remove and add them again (in this case the fileType will be automatically added as "package" for json files); new **.versionFilesList.json** structure:
-
-    {
-        "name": "web-app",
-        "currentVersion": "3.12.85",
-        "versionPrefix": "v",
-        "filesList": [
-            "package.json:package",       // package file!
-            "bower.json:package",         // package file!
-            "config/environment.js",
-            "README.md"
-        ]
-    }
 
 ## How it works
 
@@ -119,9 +102,29 @@ In json files updates the *"version"* line, in other files updates vX.X.X where 
 - **-M --major** [howMany]: increase by [howMany] the major version number (**X+howMany**.0.0); if [howMany] is missing, increase by 1
 - **-m --minor** [howMany]: increase by [howMany] the minor version number (x.**X+howMany**.0); if [howMany] is missing, increase by 1
 - **-p --patch** [howMany]: increase by [howMany] the patch version number (x.x.**X+howMany**); if [howMany] is missing, increase by 1
-- **--analyze**: search for wrong version numbers in files while updating
+- **--analyze**: search for mismatched version numbers in files while updating
 - **--verbose**: (to be used with `--analyze`) logs to screen the lines containing wrong version numbers
 - **--fix**: (to be used with `--analyze`) replace wrong version numbers found with the current one
+
+
+## UPGRADE WARNING
+
+Version 3.10.1 introduces the **fileType** support (please read below);
+if you are already using a previous version of this module, all your files in your **.versionFilesList.json** will be interpreted as **normal files**.
+To avoid this you can add ":package" next to the name of your json files in your **.versionFilesList.json** or remove and add them again (in this case the fileType will be automatically added as "package" for json files); new **.versionFilesList.json** structure:
+
+    {
+        "name": "web-app",
+        "currentVersion": "3.12.85",
+        "versionPrefix": "v",
+        "filesList": [
+            "package.json:package",       // package file!
+            "bower.json:package",         // package file!
+            "config/environment.js",
+            "README.md"
+        ]
+    }
+
 
 
 
@@ -129,10 +132,15 @@ In json files updates the *"version"* line, in other files updates vX.X.X where 
 Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a> (also available in included **license.txt** file).
 
 
-##### History
+## History
+3.12.15
+-------
+- improved console logs for `--analyze` option
+
 3.12.3
 ------
-- added "fix" functionality for wrong version numbers
+- added `--analyze` functionality to search for mismatched version numbers
+- added `--fix` functionality to fix wrong version numbers
 - improved console logs readability
 
 3.11.0
