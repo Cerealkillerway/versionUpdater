@@ -1,4 +1,4 @@
-# VersionUpdater v3.13.2
+# VersionUpdater v3.14.3
 A CLI to manage version numbers in a project.
 
 ![VersionUpdater](http://files.web-forge.info/logos/versionUpdater.png)
@@ -23,8 +23,13 @@ The *fileType* is optional; if you add a file without specifying a *fileType*, i
 
 *You'll get a warning if the file list is empty (because none of default files and added files exist in the current folder).*
 
-**It will also try to understand your package name and current version from a *package.json* or *bower.json* file.<br>
-If you don't have *package.json* or *bower.json* in your project, then you will need to update *.versionFilesList.json* manually with these informations.**
+**It will also try to understand your package name and current version from one of the followings:  
+
+- package.json
+- bower.json
+- package.js
+
+If you don't have any of these in your project, then you will need to update *.versionFilesList.json* manually with these informations.**
 
 ### File types
 
@@ -133,6 +138,10 @@ Available under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT
 
 
 ## History
+3.14.3
+------
+- added support for package.js (meteor.js packages package-file);
+
 3.13.0
 ------
 - added support for `--analyze` and `--fix` multiple wrong version numbers in the same line
