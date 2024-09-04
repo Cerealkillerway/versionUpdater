@@ -1,4 +1,4 @@
-# VersionUpdater v3.14.3
+# VersionUpdater v5.7.11
 A CLI to manage version numbers in a project.
 
 ![VersionUpdater](http://files.web-forge.info/logos/versionUpdater.png)
