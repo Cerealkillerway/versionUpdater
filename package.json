@@ -1,6 +1,6 @@
 {
   "name": "version-updater",
-  "version": "5.7.13",
+  "version": "6.0.0",
   "description": "Automatically replace version numbers in your projects",
   "author": "CK <cerealkillerway@gmail.com>",
   "type": "module",
@@ -22,8 +22,8 @@
     "CK <cerealkillerway@gmail.com>"
   ],
   "dependencies": {
-    "chalk": "^5.3.0",
-    "commander": "^12.1.0"
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0"
   },
   "licence": "MIT",
   "engines": {

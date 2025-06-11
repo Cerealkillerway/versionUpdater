@@ -1,4 +1,4 @@
-# VersionUpdater v5.7.13
+# VersionUpdater v6.0.0
 
 A CLI to manage version numbers in a project.
 
